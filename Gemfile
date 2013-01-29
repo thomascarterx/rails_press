@@ -8,6 +8,8 @@ gem 'rails', '3.2.11'
 gem 'mysql2'
 
 gem "rspec-rails", "2.11.4", :group => [:development, :test]
+gem "capybara", "2.0.2", :group => :test
+
 
 # Gems used only for assets and not required
 # in production environments by default.
