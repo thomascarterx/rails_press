@@ -38,6 +38,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+gem "factory_girl_rails", "4.2.0", :group => [:development, :test]
+
 gem 'rmre', '0.0.5'
 gem "activerecord-mysql-adapter", "~> 0.0.1"
 gem "mysql", "~> 2.9.0"
