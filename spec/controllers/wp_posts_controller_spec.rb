@@ -24,7 +24,30 @@ describe WpPostsController do
   # WpPost. As you add validations to WpPost, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {
+      post_author: 1,
+      post_date: "2013-01-29 21:52:39.000000000 Z",
+      post_date_gmt: "2013-01-29 21:52:39.000000000 Z",
+      post_content: "''",
+      post_title: "Hello from author",
+      post_excerpt: "''",
+      post_status: "inherit",
+      comment_status: "open",
+      ping_status: "open",
+      post_password: "''",
+      post_name: "7-revision",
+      to_ping: "''",
+      pinged: "''",
+      post_modified: "2013-01-29 21:52:39.000000000 Z",
+      post_modified_gmt: "2013-01-29 21:52:39.000000000 Z",
+      post_content_filtered: "''",
+      post_parent: 7,
+      guid: "http://localhost/~ericm/?p=8",
+      menu_order: "0",
+      post_type: "revision",
+      post_mime_type: "''",
+      comment_count: 0
+    }
   end
 
   # This should return the minimal set of values that should be in the session
