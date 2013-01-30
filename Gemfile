@@ -1,15 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'webrick', '1.3.1'
 
 gem 'mysql2'
 
 gem "rspec-rails", "2.11.4", :group => [:development, :test]
 gem "capybara", "2.0.2", :group => :test
-
+gem "database_cleaner", "0.9.1", :group => :test
 
 # Gems used only for assets and not required
 # in production environments by default.
