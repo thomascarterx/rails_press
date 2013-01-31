@@ -50,33 +50,6 @@ describe WpPostsController do
     }
   end
 
-    def valid_attributes_index
-    {
-      post_author: 1,
-      post_date: "2013-01-29 21:52:39.000000000 Z",
-      post_date_gmt: "2013-01-29 21:52:39.000000000 Z",
-      post_content: "''",
-      post_title: "Hello from author",
-      post_excerpt: "''",
-      post_status: "publish",
-      comment_status: "open",
-      ping_status: "open",
-      post_password: "''",
-      post_name: "7-revision",
-      to_ping: "''",
-      pinged: "''",
-      post_modified: "2013-01-29 21:52:39.000000000 Z",
-      post_modified_gmt: "2013-01-29 21:52:39.000000000 Z",
-      post_content_filtered: "''",
-      post_parent: 7,
-      guid: "http://localhost/~ericm/?p=8",
-      menu_order: "0",
-      post_type: "post",
-      post_mime_type: "''",
-      comment_count: 0
-    }
-  end
-
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # WpPostsController. Be sure to keep this updated too.
@@ -84,28 +57,12 @@ describe WpPostsController do
     {}
   end
 
-  it "tests the hashes" do
-    puts "Here is valid_attributes: #{valid_attributes.class} "
-    v_a = valid_attributes
-    puts "here is v_a: #{v_a.class}"
-    puts "Here are valid_attributes keys: #{valid_attributes.keys.inspect} "
-    puts "Here are v_a keys: #{v_a.keys.inspect} "
-    puts "Here is valid_attributes[:post_title]: #{valid_attributes[:post_title]}"
-    puts "Here is v_a[:post_title]: #{v_a[:post_title]}"
-  end
-
   describe "GET index" do
     it "assigns all wp_posts as @wp_posts" do
       v_a = valid_attributes
-      puts "v_a is a #{v_a.class}"
       v_a[:post_type] = "post"
       v_a[:post_status] = "publish"
-      # wp_post = WpPost.create! valid_attributes
-      puts "v_a['post_status']: #{v_a['post_status']}"
-      puts "WpPost.count before create: #{WpPost.count}"
       wp_post = WpPost.create! v_a
-      # wp_post = WpPost.create! valid_attributes_index
-      puts "WpPost.count after create: #{WpPost.count}"
       get :index, {}, valid_session
       assigns(:wp_posts).should eq([wp_post])
     end
