@@ -2,7 +2,7 @@ class WpPostsController < ApplicationController
   # GET /wp_posts
   # GET /wp_posts.json
   def index
-    @wp_posts = WpPost.all
+    @wp_posts = WpPost.where("post_type = ? AND post_status = ?", 'post', 'publish')
 
     respond_to do |format|
       format.html # index.html.erb

@@ -26,4 +26,5 @@ tree*txt
 /target/*
 *tar
 rails_press.dump*
+mysql*log
 #- EOF
